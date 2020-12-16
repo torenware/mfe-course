@@ -1,1 +1,1 @@
-console.log('Marketing Main');
+import('./bootstrap');
