@@ -16,3 +16,5 @@ before -uses: chrislennon/action-aws-cli@v1.1 add following config code:
           - name: ACTIONS_ALLOW_UNSECURE_COMMANDS
             run: echo 'ACTIONS_ALLOW_UNSECURE_COMMANDS=true' >> $GITHUB_ENV
 ```
+
+## Add the distribution ID for automated invalidation of the cache.
