@@ -4,6 +4,9 @@ const commonConfig = require('./webpack.common');
 
 const devConfig = {
     mode: 'development',
+    output: {
+        publicPath: 'http://localhost:8081/'
+    },
     devtool: 'eval-source-map',
     devServer: {
         port: 8081,
