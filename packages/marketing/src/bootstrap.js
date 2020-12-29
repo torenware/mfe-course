@@ -4,12 +4,14 @@ import { createMemoryHistory, createBrowserHistory } from 'history';
 import App from './App';
 
 // Mount function to start up the app
-const mount = (el, { onNavigate, defaultHistory }) => {
+const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
 
   // @see https://github.com/ReactTraining/history/blob/master/docs/api-reference.md
   // If we are running in isolation, we use a default browser history, otherwise,
   // maintain a memory history for our MFE bookkeeping.
-  const history = defaultHistory || createMemoryHistory();
+  const history = defaultHistory || createMemoryHistory({
+    initialEntries: [initialPath]
+  });
 
   // Update the container's notion of history. Note that when this particular
   // MFE is called in isolation, we will not be passed anything from a container.
