@@ -8,6 +8,7 @@ import {
 import Header from './components/Header';
 import Progress from './components/Progress';
 
+const DashboardLazy = lazy(() => import('./components/DashboardApp'));
 const MarketingLazy = lazy(() => import('./components/MarketingApp'));
 const AuthLazy = lazy(() => import('./components/AuthApp'));
 
@@ -24,6 +25,7 @@ export default () => {
           <Suspense fallback={<Progress />}>
             <Switch>
               <Route path="/auth" component={AuthLazy} />
+              <Route path="/dashboard" component={DashboardLazy} />
               <Route path="/" component={MarketingLazy} />
             </Switch>
           </Suspense>
