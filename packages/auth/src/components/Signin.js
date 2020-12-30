@@ -53,6 +53,10 @@ const useStyles = makeStyles((theme) => ({
 export default function SignIn({ onSignIn }) {
   const classes = useStyles();
 
+  if (onSignIn) {
+    console.log(onSignIn);
+  }
+
   return (
     <Container component="main" maxWidth="xs">
       <div className={classes.paper}>
